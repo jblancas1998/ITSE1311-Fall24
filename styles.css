@@ -1,0 +1,51 @@
+a {
+    color:black;
+}
+
+a:visited {
+    color:purple;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:black;
+}
+
+html {
+    background-color: lightgray;
+}
+
+nav {
+    font-size:125%;
+    margin-top: auto;
+    text-align: center;
+}
+
+div {
+   text-align: center;
+}
+
+#jstext {
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    text-shadow: 2px 2px white;
+}
+
+img {
+    justify-content:center;
+    display: flex;
+    align-items: center;
+
+}
+
+.goals {
+    text-align: center;
+}
+
+
+
+
