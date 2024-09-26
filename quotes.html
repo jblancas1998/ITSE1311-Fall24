@@ -1,13 +1,57 @@
 <html>
     <head>
         <title>Quotes Page</title>
+        
     </head>
     <body>
         <h1>Quote of the Day!</h1>
-        
-        <h1>My Favorite Websites</h1>
-        <p url="https://www.freecodecamp.org/learn/responsive-web-design/">FreeCodeCamp</p>
-        <p url="https://www.computerscience.org/bootcamps/rankings/free-coding-bootcamps/">Computer Science</p>
-        <p url="https://www.theodinproject.com/">The Odin Project</p>
+        <script>
+            const quotes = [
+                "The only limit to our realization of tomorrow is our doubts of today.",
+                "The purpose of our lives is to be happy.",
+                "Life is what happens when you're busy making other plans.",
+                "Get busy living or get busy dying.",
+                "You have within you right now, everything you need to deal with whatever the world can throw at you."
+            ];
+    
+            const userInput = prompt("Enter a number.");
+
+            const number = parseInt(userInput);
+            
+            const index = number % 5;
+
+            document.write(`<p>${quotes[index]}</p>`);
+
+        </script>
+        <h1>Best Websites to learn how to code.</h1>
+        <script>
+            const favoriteWebsites = [
+                "https://www.freecodecamp.org/learn/responsive-web-design/",
+                "https://www.computerscience.org/bootcamps/rankings/free-coding-bootcamps/",
+                "https://www.theodinproject.com/"
+            ];
+
+            const userFavorite = prompt("Enter your favorite coding learning websites.");
+
+            if (userFavorite) {
+                favoriteWebsites.push(userFavorite);
+            }
+
+            favoriteWebsites.shift();
+
+            const list = document.createElement('ul');
+            favoriteWebsites.forEach(url => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = url;
+                link.textContent = url;
+                link.target = "_blank";
+                listItem.appendChild(link);
+                list.appendChild(listItem);
+            });
+            
+            document.body.appendChild(list);
+
+        </script>
     </body>
 </html>
